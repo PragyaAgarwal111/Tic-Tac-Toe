@@ -1,0 +1,20 @@
+/* put all selector first*/
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+
+}
+body{
+    display: flex;
+    font-family: sans-serif;
+    justify-content: center;
+}
+.container
+{
+    background: rgb(97, 125, 182);
+    width: 500px;
+    height: 500px;
+}
+     
+

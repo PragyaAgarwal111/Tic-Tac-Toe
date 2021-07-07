@@ -1,0 +1,123 @@
+/* put all selector first*/
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+
+}
+body{
+    color: black;
+    display: flex;
+    font-family: sans-serif;
+    justify-content: center;
+}
+.container
+{
+    background: rgb(97, 125, 182);
+    margin: 50px;
+    padding: 50px;
+    border-radius: 25px;
+    /*remove this to fix the grid inside*/
+  /*  width: 500px;
+    height: 500px;*/
+}
+
+.title {
+    text-align: center;
+    
+}
+.title span{
+    color:white;
+}
+.status-action{
+    display: flex;
+    margin-top: 25px;
+    font-size: 25px;
+    justify-content: space-around;
+}
+.status span{
+    color: white;
+}
+.reset{
+    cursor: pointer;
+
+}
+.reset:hover{
+    color: brown;
+}
+.game-grid{
+    background: rgba(6, 2, 61, 0.993);
+    display: grid;
+    /*grid-template-columns: 250px 250px 250px;*/
+
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-gap: 15px;
+    margin-top: 50px;
+
+}
+.game-cell{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(97, 125, 182);
+    height: 150px;
+    width: 150px;
+   /*background: yellow;*/
+}
+.x,.o{
+    cursor: default;
+}
+.x::after{
+    content:'x';
+    font-size: 150px;
+
+    text-align: center;
+}
+.o::after{
+    content:'o';
+    font-size: 150px;
+    text-align: center;
+    color: white;
+}
+.won::after{
+    color: red;
+}
+@media only screen and (max-width:1024px){
+    .game-grid{
+        margin-top:25px;
+        grid-gap:10px;
+    }
+    .game-cell{
+            height: 125px;
+            width:125px;
+    }
+    .x::after{
+            font-size: 125px;
+    }
+    .o::after{
+            font-size: 125px;
+    }
+                
+
+
+}
+@media only screen and (max-width:540px){
+    .container{
+        margin: 25px;
+        padding: 25px;
+    }
+    .game-cell{
+        height: 100px;
+        width: 100px;
+    }
+    .x::after{
+        font-size: 100px;
+    }
+    .o::after{
+        font-size: 125px;
+    }
+}
+
+
